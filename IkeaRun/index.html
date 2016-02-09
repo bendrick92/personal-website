@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Ikea Run</title>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab|Titillium+Web|Erica+One' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+	</head>
+	<body cz-shortcut-listen="true">
+		<div class="wrapper">
+            <div id="headerContainer">
+                <div class="title">
+                    Ikea Run
+                </div>
+            </div>
+			<div id="initContainer">
+                <div id="vehicleContainer" class="formContainer">
+                    <h2>Vehicle:</h2>
+                    <select id="vehicleList"></select>
+                </div>
+                <div id="storageZoneContainer" class="formContainer">
+                    <h2>Area:</h2>
+				    <select id="storageZoneList"></select>
+                </div>
+                <div id="inputContainer" class="formContainer">
+                    <h2>Package:</h2>
+                    <input type="text" id="txtWidth" />
+                    <input type="text" id="txtLength" />
+                </div>
+                <div class="row inputs">
+                    <input type="button" id="btnCalculate" value="Calculate" />
+                </div>
+			</div>
+			<div id="canvasContainer" style="display: none;">
+				<div class="row">
+					<canvas id="myCanvas">
+					</canvas>
+				</div>
+				<div class="row">
+					<div id="message"></div>
+				</div>
+				<div class="row inputs">
+					<input type="button" id="btnReset" value="Reset">
+				</div>
+			</div>
+			<div class="push"></div>
+		</div>
+        <div class="footer">
+            &copy; 2016 Ben Walters
+        </div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        <script src="scripts/underscore.js"></script>
+		<script src="scripts/backbone.js"></script>
+		<script src="scripts/models.js"></script>
+		<script src="scripts/collections.js"></script>
+		<script src="scripts/views.js"></script>
+        <script src="scripts/monitor.js"></script>
+</body></html>

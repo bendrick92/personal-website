@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Salary Per Second</title>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab|Titillium+Web|Playfair+Display:900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+	</head>
+	<body cz-shortcut-listen="true">
+		<div class="wrapper">
+            <div id="headerContainer">
+                <div class="title">
+                    <span class="overUnder">Salary Per Second</span>
+                </div>
+            </div>
+			<div id="initContainer">
+				<div class="row">
+					<h3>Enter your salary:</h3>
+					<span>$</span><input type="text" id="txtSalary">
+				</div>
+				<div class="row inputs">
+					<input type="button" id="btnGo" value="Calculate">
+				</div>
+			</div>
+			<div id="summaryContainer" style="display: none;">
+				<div class="row">
+                    <div class="col-5">
+                        <h3>$ per week</h3>
+                        <span>$</span><input type="text" id="txtPerWeek" readonly>
+                    </div>
+                    <div class="col-5">
+                        <h3>$ per day</h3>
+                        <span>$</span><input type="text" id="txtPerDay" readonly>
+                    </div>
+					<div class="col-5">
+                        <h3>$ per hour</h3>
+                        <span>$</span><input type="text" id="txtPerHour" readonly>
+                    </div>
+                    <div class="col-5">
+                        <h3>$ per minute</h3>
+                        <span>$</span><input type="text" id="txtPerMinute" readonly>
+                    </div>
+                    <div class="col-5">
+                        <h3>$ per second</h3>
+                        <span>$</span><input type="text" id="txtPerSecond" readonly>
+                    </div>
+				</div>
+                <div class="row">
+                    <h3>Since loading this page:</h1>
+                    <span>$</span><input type="text" id="txtAccruedSalary" readonly>
+                </div>
+				<div class="row">
+					<div id="message"></div>
+				</div>
+				<div class="row inputs">
+					<input type="button" id="btnReset" value="Reset">
+				</div>
+			</div>
+			<div class="push"></div>
+		</div>
+        <div class="footer">
+			<p>Ben Walters &copy; 2015</p>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+		<script src="scripts/monitor.js"></script>
+    </body>
+</html>

@@ -1,0 +1,411 @@
+/* Sticky Footer CSS (c) Ryan Fait 2015 - ryanfait.com/stick-footer/ */
+body {
+	font-family: 'Droid Serif', serif;
+}
+h1, h2, h3 {
+	font-family: 'Roboto', sans-serif;
+}
+
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.wrapper {
+	max-width: 1100px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -3em;
+	padding: 0 1em;
+}
+.footer, .push {
+	height: 3em;
+}
+
+.header {
+
+}
+	#headerBackground {
+		position: absolute;
+		width: 100%;
+		background-color: #00AD9C;
+	}
+	#headerContainer {
+		position: relative;
+		width: 100%;
+		max-width: 1100px;
+		height: auto;
+		margin: 0 auto;
+	}
+		#headerContainer #headerImage {
+
+		}
+			#headerContainer #headerImage img {
+				width: auto;
+				height: 120%;
+				position: absolute;
+				top: -10%;
+				left: 1em;
+				z-index: 100;
+			}
+		#headerContainer #headerTitle {
+			width: 90%;
+			position: relative;
+			text-align: right;
+			color: #fff;
+			margin: 1em 0;
+			padding: 0 5%;
+		}
+	#navMenuContainer {
+		width: 100%;
+		height: auto;
+		margin: 1em auto;
+		text-align: center;
+	}
+		#navMenuContainer ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+			#navMenuContainer ul > li {
+				display: inline;
+				margin: .5em 2em;
+			}
+#contentContainer {
+	width: 95%;
+	height: auto;
+	margin: 1em 2.5%;
+}
+	#contentContainer p {
+		margin: .5em 0;
+	}
+	#contentContainer .contentSection {
+		height: auto;
+		display: inline-block;
+		margin: 1em 0;
+		vertical-align: top;
+	}
+		.contentSection h2 {
+			margin: 0 0 .5em 0;
+		}
+		#passion {
+			position: relative;
+		}
+			#passion ul {
+				position: relative;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+				#passion ul > li {
+					display: inline-block;
+					margin: 0 .5em .5em 0;
+					padding: .25em 1em;
+					text-align: center;
+					background-color: #00AD9C;
+					color: #fff;
+					border-radius: 1em;
+				}
+		#education {
+			position: relative;
+		}
+			#education ul {
+				position: relative;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+				#education ul > li {
+					width: 7em;
+					height: 7em;
+					display: inline-block;
+					vertical-align: top;
+					margin: 0;
+					padding: 2em;
+					text-align: center;
+					background-color: #00AD9C;
+					color: #fff;
+					border-radius: 7em;
+				}
+		#professional {
+			position: relative;
+		}
+			#professional ul {
+				position: relative;
+				list-style-type: none;
+				margin: 1em 0 0 0;
+				padding: 1em 0 0 0;
+				border-top: 2px solid #000;
+				border-left: none;
+			}
+				#professional ul > li {
+					display: inline-block;
+					margin: 0 5%;
+					padding: 0;
+					position: relative;
+				}
+					#professional ul > li:before {
+						content: '';
+						width: 1em;
+						height: 1em;
+						position: absolute;
+						left: 0;
+						top: -1.6em;
+						border-radius: 1em;
+						background: #00AD9C;
+					}
+		#skills {
+			position: relative;
+		}
+			#skills ul {
+				position: relative;
+				margin: 0;
+				padding: 0;
+			}
+				#skills .keys {
+					width: 100%;
+					height: 2em;
+					list-style-type: none;
+				}
+					#skills .keys > li {
+						width: 24%;
+						height: auto;
+						float: left;
+						text-align: right;
+						margin: 0 -2px 0 0;
+						padding: .5em 1% 0 0;
+						border-top: 2px solid #000;
+						border-right: 2px solid #000;
+					}
+				#skills .items {
+					list-style-type: none;
+				}
+					#skills .items > li {
+						height: auto;
+						display: block;
+						margin: .5em 0;
+						padding: .5em 2%;
+						background-color: #00AD9C;
+						color: #fff;
+						border-radius: 1em;
+					}
+						#skills .items > li.four {
+							width: 96%;
+						}
+						#skills .items > li.three {
+							width: 71%;
+						}
+						#skills .items > li.two {
+							width: 46%;
+						}
+						#skills .items > li.one {
+							width: 21%
+						}
+        #projects {
+            width: 100%;
+            position: relative;
+        }
+            #projects > ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+                #projects > ul > li {
+                    margin: 1em 0;
+                    padding: 2%;
+                    display: inline-block;
+                    vertical-align: top;
+                    background-color: #00AD9C;
+                }
+                    #projects > ul > li h3 {
+                        color: #ffffff;
+                        margin: 0 0 4%;
+                    }
+                    #projects > ul > li img {
+                        width: 100%;
+                        height: auto;
+                    }
+                    #projects > ul > li ul {
+                        margin: 4% 0 0 2%;
+                        padding: 0 0 0 2%;
+                        color: #ffffff;
+                    }
+                        #projects > ul > li ul li {
+                            margin: .25em 0;
+                        }
+		#contact {
+			width: 100%;
+			position: relative;
+		}
+			#contact ul {
+				width: 100%;
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
+				#contact ul > li {
+					height: auto;
+					display: inline-block;
+					margin: .25em 0;
+					padding: 0;
+				}
+					#contact ul > li a {
+						link-style-type: none;
+						text-decoration: none;
+					}
+					#contact ul > li img {
+						width: auto;
+						height: 2em;
+					}
+					#contact ul > li  .imgContainer, .linkContainer {
+						width: auto;
+						display: inline-block;
+						vertical-align: top;
+					}
+						#contact ul > li .imgContainer {
+							height: 2em;
+							width: 2em;
+							text-align: center;
+							line-height: 2em;
+							border-radius: 2em;
+							background-color: #00AD9C;
+							color: #fff;
+						}
+						#contact ul > li .linkContainer {
+							height: 2em;
+							line-height: 2em;
+							margin: 0 0 0 .5em;
+						}
+.footer {
+	line-height: 3em;
+	text-align: center;
+	background-color: #00AD9C;
+	color: #fff;
+}
+
+@media all and (max-width: 720px) {
+    #headerBackground {
+		height: 3.5em;
+	}
+	#headerContainer {
+
+	}
+		#headerTitle {
+			height: 3.5em;
+			font-size: 1em;
+			line-height: 3.5em;
+		}
+	.contentSection50 {
+		width: 100%;
+	}
+	.contentSection100 {
+		width: 100%;
+	}
+	#professional ul {
+		display: inline-block;
+		border-top: none;
+		border-left: 2px solid #000;
+		margin: 0 0 0 1em;
+		padding: 0 0 0 1.5em;
+	}
+		#professional ul > li {
+			display: block;
+			left: 0 !important;
+			margin: 1em 0;
+		}
+			#professional ul > li:before {
+				left: -2.05em;
+				top: 0;
+			}
+    #skills .keys > li {
+        font-size: .75em;
+    }
+    #projects > ul > li {
+        width: 96%;
+        display: inline-block;
+    }
+	#contact ul > li {
+		width: 100%;
+	}
+}
+
+@media all and (min-width: 721px) and (max-width: 1080px) {
+    #headerBackground {
+		height: 3.5em;
+	}
+	#headerContainer {
+
+	}
+		#headerTitle {
+			height: 3.5em;
+			font-size: 1em;
+			line-height: 3.5em;
+		}
+	.contentSection50 {
+		width: 100%;
+	}
+	.contentSection100 {
+		width: 100%;
+	}
+	#professional ul {
+		display: inline-block;
+		border-top: none;
+		border-left: 2px solid #000;
+		margin: 0 0 0 1em;
+		padding: 0 0 0 1.5em;
+	}
+		#professional ul > li {
+			display: block;
+			left: 0 !important;
+			margin: 1em 0;
+		}
+			#professional ul > li:before {
+				left: -2.05em;
+				top: 0;
+			}
+    #skills .keys > li {
+        font-size: .75em;
+    }
+    #projects > ul > li {
+        width: 45%;
+        display: inline-block;
+    }
+	#contact ul > li {
+		width: 100%;
+	}
+}
+
+@media all and (min-width: 1081px) {
+	#headerBackground {
+		height: 7em;
+	}
+	#headerContainer {
+
+	}
+		#headerTitle {
+			height: 3.5em;
+			font-size: 2em;
+			line-height: 3.5em;
+		}
+	.contentSection50 {
+		width: 48%;
+	}
+		.contentSection50:nth-of-type(1) {
+			padding: 0 1% 0 0;
+		}
+		.contentSection50:nth-of-type(2) {
+			padding: 0 0 0 1%;
+		}
+	.contentSection100 {
+		width: 100%;
+	}
+    #projects > ul > li {
+        width: 45%;
+        display: inline-block;
+    }
+	#contact ul > li {
+		width: 33%;
+	}
+}
