@@ -1,170 +1,167 @@
+<!DOCTYPE HTML>
 <html>
-	<head>
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-		<title>Ben Walters</title>
-		<link href='https://fonts.googleapis.com/css?family=Droid+Serif|Roboto' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="styles.css" type="text/css" />
-	</head>
-	<body>
-		<div class="header">
-			<div id="headerBackground"></div>
-			<div id="headerContainer">
-				<div id="headerImage">
-					<img src="me_circle.png" />
-				</div>
-				<div id="headerTitle">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">        
+        <title>Ben Walters</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif|Roboto' rel='stylesheet' type='text/css'>        
+        <link rel="stylesheet" href="normalize.css" type="text/css">
+        <link rel="stylesheet" href="layout.css" type="text/css">
+        <link rel="stylesheet" href="type.css" type="text/css">
+        <link rel="stylesheet" href="colors.css" type="text/css">
+    </head>
+    <body>
+        <header class="teal">
+            <div class="container">
+				<div class="item flex-50">
 					<h1>Ben Walters</h1>
 				</div>
-			</div>
-			<!--<div id="navMenuContainer">
-				<ul>
-					<li>Home</li>
-					<li>About</li>
-					<li>Resume</li>
-				</ul>
-			</div>-->
-		</div>
-		<div class="wrapper">
-			<div id="contentContainer">
-				<div id="intro" class="contentSection contentSection50">
-					<h2>Welcome!</h2>
-					<p>My name is Ben Walters, and I'm a web developer from Rochester, MN.</p>
-					<p>I have several years experience developing websites using HTML, CSS, C#, ASP.NET, VBScript, and SQL in the educational, publishing, and medical certification fields.</p>
-					<p>I am passionate about finding elegant solutions to complex problems, and creating user-friendly experiences across the web.  I love helping other people!</p>
-					<p>Feel free to contact me if you have any questions or are interested in working together!</p>
+				<div class="item flex-50">
+					<nav>
+						<ul>
+							<li><a href="http://www.bpwalters.com">Home</a></li>
+							<li><a href="http://blog.bpwalters.com">Blog</a></li>
+						</ul>
+					</nav>
 				</div>
-				<div id="passion" class="contentSection contentSection50">
-					<h2>What else?</h2>
-					<p>My other interests include:<p>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="intro">
+                <div class="container">
+                    <div class="item flex-50">
+                        <h2>About Me</h2>
+                        <p>Hi there, and welcome!  My name is Ben Walters, and I'm a web developer from Rochester, MN.</p>
+                        <p>I have several years development experience in the educational, publishing, and medical certification industries.</p>
+                        <p>I am passionate about finding elegant solutions to complex problems, and creating user-friendly experiences across the web.  I enjoy experimenting with new technologies, and strive to continuously learn from those around me.</p>
+                    </div>                    
+                    <div class="item flex-50">
+                        <img src="me.jpg">
+                    </div>
+					<div class="item flex-50">
+						<p>In my free time, I enjoy spending time with my girlfriend, napping with our cats, riding my bike, and car shows.</p>
+                        <p>Feel free to <a href="#">contact me</a> if you have any questions or if you're interested in working together!</p>						
+					</div>                    
+					<div class="item flex-50">
+						<img src="cats.jpg">
+					</div>
+                </div>
+            </section>
+            <section id="history" class="light-grey">
+                <div class="container">
+                    <h2>Education/Employment</h2>   
+                    <div class="item flex-50">
+                        <h3>University of Wisconsin-La Crosse</h3>
+                        <ul>
+                            <li>Helpdesk Consultant</li>
+                            <li class="dates">Aug 2010 - Oct 2011 <span class="timeframe"></span></li>
+                            <li>
+                                <p>Student and staff hardware/software troubleshooting and support.</p>
+                            </li>
+							<li>Student Programmer</li>
+							<li class="dates">Oct 2011 - May 2014 <span class="timeframe"></span></li>
+							<li>
+								<p>Public-facing website development/maintenance, and internal ASP.NET development.  Staff hardware and networking support in collaboration with campus IT department.</p>
+                            </li>
+                            <li>B.S. Information Systems</li>
+                            <li class="dates">May 2010 - May 2014 <span class="timeframe"></span></li>
+                            <li>
+                                <p>Emphasis on project management/introductory programming and database courses, with a special interest in philosphy and art courses.  Capstone study on responsive web design.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item flex-50">
+                        <h3>Saint Mary's Press</h3>
+                        <ul>
+                            <li>IT Intern</li>
+                            <li class="dates">May 2013 - Aug 2013 <span class="timeframe"></span></li>
+                            <li>
+                                <p>New development and maintenance of ASP.NET MVC applications utilizing agile methodology.  Research and recommendation of software purchasing, and introduction to user testing on mobile application project.</p>
+                            </li>
+                            <li>Contract Developer</li>
+                            <li class="dates">Aug 2013 - Jun 2014 <span class="timeframe"></span></li>
+                            <li>
+                                <p>Iterative development of new ASP.NET MVC company intranet.</p>
+                            </li>
+                            <li>Web Application Developer</li>
+                            <li class="dates">Jun 2014 - Dec 2014 <span class="timeframe"></span></li>
+                            <li>
+                                <p>Develop and maintain existing ASP.NET MVC, C# web applications.  Work with small project teams to identify, plan, and execute application updates.  Initial design and development of custom Bootstrap-based intranet.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item flex-50">
+                        <h3>American Board of Physical Medicine & Rehabilitation</h3>
+                        <ul>
+                            <li>Web Application Developer</li>
+                            <li class="dates">Jan 2015 - Present <span class="timeframe"></span></li>
+                            <li>
+                                <p>Development and maintenance of new and existing VBScript, ASP.NET MVC, and Web Forms applications.  Collaboration with third-party design to develop an updated, functional, and responsive public-facing website.</p>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="skills">
+                <div class="container">
+                    <h2>Skills</h2>
+                    <div class="item flex-100">
+                        <ul>
+                            <li class="percentage-key">
+                            <div>0</div>
+                            <div>10</div> 
+                            </li>
+                            <li class="eighty">HTML</li>
+                            <li class="eighty">CSS</li>
+                            <li class="sixty">C#</li>
+                            <li class="sixty">SQL</li>
+                            <li class="fifty">VBScript</li>
+                            <li class="thirty">Python</li>
+                            <li class="thirty">PHP</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="projects" class="light-grey">
+                <div class="container">
+                    <h2>Projects</h2>
+                    <div class="item flex-33">
+                        <h3>Ikea Run</h3>
+                        <p>Check whether a package/container will fit in your car.  Built as an exercise in learning Backbone.js.</p>                        						                        
+                        <p><a href="http://www.bpwalters.com/IkeaRun/index.html">Learn more</a></p>
+                    </div>
+                    <div class="item flex-33">
+                        <h3>Salary Per Second</h3>						
+                        <p>Caculate monthly, weekly, daily, etc. salary based on input annual salary.</p>
+                        <p><a href="http://www.bpwalters.com/SalaryPerSecond/index.html">Learn more</a></p>
+                    </div>
+                    <div class="item flex-33">
+                        <h3>Raspberry Pi OBD-II</h3>						
+                        <p>Python-based script designed to parse bluetooth OBD-II adapter data and output to a 16x2 character OLED display.</p>
+                        <!--<p><a href="#">Learn more</a></p>-->
+                </div>
+            </section>            
+        </main>
+        <footer class="dark-teal">
+            <div class="container">
+                <div class="item flex-50">
+                    &copy 2016 Ben Walters
+                </div>
+                <div class="item flex-50">
 					<ul>
-						<li>Cars</li>
-						<li>Cats</li>
-						<li>Freelance Web Development</li>
-						<li>Bike riding</li>
-						<li>Family</li>
+						<li><a href="https://www.facebook.com/ben.walters.9634" class="social-icon fa fa-small fa-facebook"></a></li>
+						<li><a href="https://github.com/bendrick92" class="social-icon fa fa-small fa-github"></a></li>
+						<li><a href="https://www.linkedin.com/in/ben-walters-89846a66" class="social-icon fa fa-small fa-linkedin"></a></li>
 					</ul>
-				</div>
-				<div id="education" class="contentSection contentSection100">
-					<h2>Education</h2>
-					<ul style="text-align: center;">
-						<li>
-							<h3>Where:</h3>
-							University of Wisconsin-La Crosse
-						</li>
-						<li>
-							<h3>What:</h3>
-							B.S. Information Systems
-						</li>
-						<li>
-							<h3>When:</h3>
-							2010-2014
-						</li>
-						<li>
-							<h3>Other:</h3>
-							Art, Philosophy
-						</li>
-					</ul>
-				</div>
-				<div id="professional" class="contentSection contentSection100">
-					<h2>Who have I worked with?</h2>
-					<ul>
-						<li>
-							<div class="marker"></div>
-							<div class="details">
-								<h3>June 2014</h3>
-								Started at Saint Mary's Press
-							</div>
-						</li>
-						<li>
-							<div class="marker"></div>
-							<div class="details">
-								<h3>January 2015</h3>
-								Started at ABPMR
-							</div>
-						</li>
-					</ul>
-				</div>
-				<div id="skills" class="contentSection contentSection100">
-					<h2>What can I do?</h2>
-					<ul class="keys">
-						<li>Beginner</li>
-						<li>Proficient</li>
-						<li>Experienced</li>
-						<li>Expert</li>
-					</ul>
-					<ul class="items">
-						<li class="four">HTML</li>
-						<li class="four">CSS</li>
-						<li class="three">C#</li>
-						<li class="three">SQL</li>
-						<li class="two">VBScript</li>
-						<li class="one">Python</li>
-                        <li class="one">PHP</li>
-                        <li class="one">Backbone.js</li>
-					</ul>
-				</div>
-				<div id="projects" class="contentSection contentSection100">
-					<h2>My Personal Projects</h2>
-					<ul>
-						<li>
-                            <h3>Ikea Run</h3>
-                            <a href="../IkeaRun/index.html" target="_blank">
-                                <img src="ikeaRunScreen.png" alt="Ikea Run" />
-                            </a>
-                            <ul>
-                                <li>Check if a package will fit in your car</li>
-                                <li>Built on Backbone.js</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3>Salary Per Second</h3>
-                            <a href="../SalaryPerSecond/index.html" target="_blank">
-                                <img src="salaryPerSecondScreen.png" alt="Salary Per Second" />
-                            </a>
-                            <ul>
-                                <li>Calculate annual salary broken down into monthly, weekly, daily, hourly, etc. income</li>
-                            </ul>
-                        </li>
-					</ul>
-				</div>
-				<div id="contact" class="contentSection contentSection50">
-					<h2>Let's connect!</h2>
-					<ul>
-						<li>
-							<a href="http://www.facebook.com/ben.walters.9634" target="_blank">
-								<div class="imgContainer">
-									<!--<img src="fbLogo.png" alt="Facebook" />-->
-									<div class="logo">F</div>
-								</div>
-								<div class="linkContainer">facebook.com/ben.walters.9634</div>
-							</a>
-						</li>
-						<li>
-							<a href="mailto:walters.benj@gmail.com">
-								<div class="imgContainer">
-									<!--<img src="gmailLogo.ico" alt="Email" />-->
-									<div class="logo">M</div>
-								</div>
-								<div class="linkContainer">walters.benj@gmail.com</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.linkedin.com/in/ben-walters-89846a66" target="_blank">
-								<div class="imgContainer">
-									<!--<img src="liLogo.png" alt="LinkedIn" />-->
-									<div class="logo">L</div>
-								</div>
-								<div class="linkContainer">linkedin.com/in/ben-walters-89846a66</div>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="push"></div>
-		</div>
-		<div class="footer">
-			<p>Ben Walters &copy; 2015</p>
-		</div>
-		<script type="text/javascript" src="monitor.js"></script>
-	</body>
+                </div>
+            </div>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="site.js"></script>
+    </body>
 </html>

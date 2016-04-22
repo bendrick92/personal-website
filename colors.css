@@ -1,0 +1,63 @@
+body {
+    color: #2E2E2E;
+}
+
+.teal {
+    color: #ffffff;
+    background-color: #009688;
+}
+.dark-teal {
+    color: #ffffff;
+    background-color: #00695C;
+}
+.light-teal {
+    background-color: #E0F2F1;
+}
+.light-grey {
+    background-color: #F5F5F5;
+}
+
+.hamburger > span {
+    background-color: #ffffff;
+}
+
+.social-icon {
+    color: #00695C;
+    background-color: #ffffff;
+}
+.percentage-key {
+    border-color: #5E5E5E;
+}
+    #skills ul li:not(:first-child) {
+        color: #ffffff;
+        background-color: #26A69A;
+    }
+
+#skills ul > li:not(:first-child):hover {
+    background-color: #B2DFDB;
+}
+main a {
+    color: #009688;
+}
+    main a:hover {
+        color: #B2DFDB;
+    }
+main .item:not(:last-child) {
+	border-color: #BDBDBD;
+}
+footer a:hover {
+    background-color: #B2DFDB;
+}
+
+@media screen and (max-width: 720px) {
+	nav li:hover {
+		background-color: #B2DFDB;
+	}
+}
+@media screen and (min-width: 721px) {
+	header a:hover {
+		color: #B2DFDB;
+	}
+}
+
+/* http://paletton.com/#uid=13E0u0kkCmMa9zufurZpni5uOcy */
