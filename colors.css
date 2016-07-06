@@ -1,11 +1,27 @@
 body {
-    color: #2E2E2E;
+    color: #3A4145;
+}
+p.subheading {
+    color: #4e5356;
+}
+h1, h2, h3 {
+    color: #009688;
+}
+h4, h5, h6 {
+    color: #3A4145;
+}
+code {
+    border-color: #E3EDF3;
+    background-color: #F7FAFB;
 }
 
 .teal {
     color: #ffffff;
     background-color: #009688;
 }
+    .teal h1 {
+        color: #ffffff;
+    }
 .dark-teal {
     color: #ffffff;
     background-color: #00695C;

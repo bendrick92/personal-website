@@ -4,7 +4,15 @@ ul {
 }
 p {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5rem;
+}
+code {
+    max-width: 100%;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 3px;
+    display: inline-block;
 }
 
 /* Responsive Layout */
@@ -189,8 +197,8 @@ body {
     height: 20px;
     display: inline-block;
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: 2.3rem;
+    right: 2.3rem;
     flex: none;
     -ms-flex: none;
     -webkit-box-flex: none;
