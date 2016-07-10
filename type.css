@@ -8,7 +8,8 @@ body {
         transition: all .25s linear;
     }
     header h1 {
-        font-weight: normal;
+        font-family: 'Roboto', serif;
+        letter-spacing: 1px;
     }
 	nav li:hover {
 		-webkit-transition: all .25s linear;
@@ -24,6 +25,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 1rem;
+}
+h1, h2, h3 {
+    font-family: 'Droid Serif', serif;
 }
 h1 {
     font-size: 45px;
@@ -54,4 +58,7 @@ code {
 .social-icon a {
     font-weight: bold;
     text-decoration: none;
+}
+.align-center {
+    text-align: center;
 }

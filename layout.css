@@ -160,7 +160,7 @@ body {
         }
         .item img {
             width: 100%;
-            max-width: 400px;
+            max-width: 100%;
             margin-right: auto;
             margin-bottom: 1rem;
             margin-left: auto;
@@ -197,8 +197,8 @@ body {
     height: 20px;
     display: inline-block;
     position: absolute;
-    top: 2.3rem;
-    right: 2.3rem;
+    top: 2.1rem;
+    right: 2.1rem;
     flex: none;
     -ms-flex: none;
     -webkit-box-flex: none;
@@ -373,6 +373,14 @@ body {
         text-align: center;
     }
 }
+@media screen and (max-width: 720px) {
+    .hidden-mobile {
+        display: none;
+    }
+    .hidden-desktop {
+        display: normal;
+    }
+}
 @media screen and (min-width: 721px) and (max-width: 1024px) {
     .hamburger {
         display: none;
@@ -391,5 +399,13 @@ body {
     }
     .container {
         width: 75%;
+    }
+}
+@media screen and (min-width: 721px) {
+    .hidden-mobile {
+        display: normal;
+    }
+    .hidden-desktop {
+        display: none;
     }
 }
