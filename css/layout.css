@@ -1,0 +1,22 @@
+#intro .item {
+    border-bottom: none;
+}
+#history ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+    #history .dates {
+        margin-top: .25em;
+        margin-bottom: 1em;
+    }
+#skills ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+    #skills ul li:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+    #skills ul li:not(:first-child) {
+        padding: 1em;
+        cursor: pointer;
+    }
