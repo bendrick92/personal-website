@@ -10,6 +10,10 @@
         <link rel="stylesheet" href="http://assets.bpwalters.com/css/layout.css" type="text/css">
         <link rel="stylesheet" href="http://assets.bpwalters.com/css/type.css" type="text/css">
         <link rel="stylesheet" href="http://assets.bpwalters.com/css/colors.css" type="text/css">
+        <!--<link rel="stylesheet" href="../website-assets/css/normalize-4.0.0.css" type="text/css">
+        <link rel="stylesheet" href="../website-assets/css/layout.css" type="text/css">
+        <link rel="stylesheet" href="../website-assets/css/type.css" type="text/css">
+        <link rel="stylesheet" href="../website-assets/css/colors.css" type="text/css">-->
         <link rel="stylesheet" href="css/layout.css" type="text/css">
         <link rel="stylesheet" href="css/type.css" type="text/css">
         <link rel="stylesheet" href="css/colors.css" type="text/css">
@@ -20,6 +24,11 @@
 				<div class="item flex-50">
 					<h1 class="hidden-mobile">Ben Walters</h1>
                     <h1 class="hidden-desktop">BW</h1>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 				</div>
 				<div class="item flex-50">
 					<nav>
@@ -29,18 +38,15 @@
 						</ul>
 					</nav>
 				</div>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
             </div>
         </header>
         <main>
             <section id="intro">
                 <div class="container">
-                    <div class="item flex-50">
+                    <div class="item flex-100">
                         <h3>About Me</h3>
+                    </div>
+                    <div class="item flex-50">
                         <p>Welcome to my website!  My name is Ben Walters, and I'm a web developer from Rochester, MN.</p>
                         <p>I have several years development experience in the educational, publishing, and medical certification industries.</p>
                         <p>I am passionate about finding elegant solutions to complex problems and creating user-friendly experiences across the web.  I enjoy experimenting with new technologies and strive to continuously learn from those around me.</p>
@@ -61,7 +67,9 @@
             </section>
             <section id="history" class="light-grey">
                 <div class="container">
-                    <h3>Education</h3>
+                    <div class="item flex-100">
+                        <h3>Education</h3>
+                    </div>
                     <div class="item flex-100">
                         <h4>University of Wisconsin-La Crosse</h4>
                         <ul>
@@ -72,7 +80,9 @@
                             </li>
                         </ul>
                     </div>
-                    <h3>Employment</h3>   
+                    <div class="item flex-100">
+                        <h3>Employment</h3>
+                    </div> 
                     <div class="item flex-100">
                         <h4>University of Wisconsin-La Crosse</h4>
                         <ul>
@@ -122,7 +132,9 @@
             </section>
             <section id="skills">
                 <div class="container">
-                    <h3>Skills</h3>
+                    <div class="item flex-100">
+                        <h3>Skills</h3>
+                    </div>
                     <div class="item flex-100">
                         <ul>
                             <li class="percentage-key">
@@ -144,7 +156,9 @@
             </section>
             <section id="projects" class="light-grey">
                 <div class="container">
-                    <h3>Projects</h3>
+                    <div class="item flex-100">
+                        <h3>Projects</h3>
+                    </div>
                     <div class="item flex-33">
                         <h4>obdPi</h4>						
                         <p>Python 2.7 project designed to parse bluetooth OBD-II adapter data and output to a 16x2 character OLED display.</p>
