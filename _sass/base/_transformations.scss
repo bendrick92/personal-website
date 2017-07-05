@@ -1,0 +1,27 @@
+.is-fill-screen {
+    width: 100vw;
+    height: 100vh;
+}
+.has-background-image {
+    background-size: cover;
+    background-position: center;
+}
+.has-fade-in-slide-up {
+    @include animation(fade-in-slide-up 800ms 100ms forwards);
+}
+
+@media screen and (max-width: $phone-max-width) {
+    .is-hidden-mobile {
+        display: none !important;
+    }
+}
+@media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    .is-hidden-tablet {
+        display: none !important;
+    }
+}
+@media screen and (min-width: $desktop-min-width) {
+    .is-hidden-desktop {
+        display: none !important;
+    }
+}

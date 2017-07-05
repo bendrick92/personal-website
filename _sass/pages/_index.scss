@@ -1,0 +1,25 @@
+#homepage {
+    h1 {
+        opacity: 0;
+        @include animation(fade-in-slide-up 800ms forwards);
+    }
+    nav {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            li {
+                display: inline-block;
+                opacity: 0;
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i}) {
+                        @include animation(fade-in-slide-up 800ms (300ms + ($i - 1) * 300ms) forwards);
+                    }
+                }
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

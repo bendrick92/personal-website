@@ -1,0 +1,33 @@
+@mixin animation($animationName) {
+    -webkit-animation: $animationName;
+    -moz-animation: $animationName;
+    -ms-animation: $animationName;
+    -o-animation: $animationName;
+    animation: $animationName;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@include keyframes(fade-in-slide-up) {
+    0% {
+        opacity: 0;
+        transform: translate3d(0,30px,0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
