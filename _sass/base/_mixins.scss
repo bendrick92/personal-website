@@ -31,3 +31,12 @@
         transform: none;
     }
 }
+
+@include keyframes(fade-in-half) {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .5;
+    }
+}
