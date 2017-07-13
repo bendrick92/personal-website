@@ -20,6 +20,16 @@
     @extend .has-no-padding;
     @extend .has-no-margins;
 }
+.zoom-on-hover {
+    > * {
+        transition: all 300ms ease-in-out;
+    }
+    &:hover {
+        > * {
+            @include zoom-scale(1.2);
+        }
+    }
+}
 
 @media screen and (max-width: $phone-max-width) {
     .is-hidden-mobile {

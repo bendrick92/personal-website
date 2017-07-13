@@ -1,12 +1,9 @@
 .item {
     padding: 0 1rem;
-    -ms-flex: 1 0 auto;
-    -moz-box-flex: 1 0 auto;
-    -webkit-box-flex: 1 0 auto;
-    -webkit-flex: 1 0 auto;
-    flex: 1 0 auto;
+    @include flex(1, 0, auto);
     position: relative;
     box-sizing: border-box;
+    overflow: hidden;
     &.flex-100 {
         width: 100%;
         max-width: 100%;
@@ -22,6 +19,11 @@
     &.flex-25 {
         width: 25%;
         max-width: 25%;
+    }
+    &.has-centered-content {
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
     }
 }
 
