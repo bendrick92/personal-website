@@ -32,6 +32,15 @@
     }
 }
 
+@include keyframes(fade-in) {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
 @include keyframes(fade-in-fifty) {
     0% {
         opacity: 0;
@@ -45,7 +54,31 @@
 	transform: scale($scale);
 }
 
-// Below are borrowed, with credit, from https://github.com/mastastealth/sass-flex-mixin/blob/master/_flex.scss
+@mixin phone {
+	@media screen and (max-width: $phone-max-width) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+		@content;
+	}
+}
+
+@mixin phone-and-tablet {
+	@media screen and (max-width: $tablet-max-width) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media screen and (min-width: $desktop-min-width) {
+		@content;
+	}
+}
+
+// Borrowed from https://github.com/mastastealth/sass-flex-mixin/blob/master/_flex.scss
 @mixin flexbox {
 	display: -webkit-box;
 	display: -webkit-flex;

@@ -1,13 +1,14 @@
-#homepage {
+#projects {
     .container {
         z-index: 1;
-        @for $i from 1 through 3 {
-            .item {
+        @for $i from 1 through 6 {
+            .item.project-item {
+                padding: 5em 0;
                 background-color: $black;
                 z-index: 2;
                 opacity: 0;
                 &:nth-of-type(#{$i}) {
-                    @include animation(fade-in-slide-up 1s (300ms + ($i - 1) * 300ms) forwards);
+                    @include animation(fade-in-slide-up 1s (($i - 1) * 300ms) forwards);
                     a {
                         position: absolute;
                         width: 100%;
@@ -16,11 +17,11 @@
                         left: 0;
                         z-index: 5;
                     }
-                    h2 {
+                    h3 {
                         opacity: 0; 
                         z-index: 4;          
                         color: $white;
-                        @include animation(fade-in-slide-up 500ms (300ms + ($i - 1) * 300ms) forwards);
+                        @include animation(fade-in-slide-up 500ms (($i - 1) * 300ms) forwards);
                     }
                 }
             }
