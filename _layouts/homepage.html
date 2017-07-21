@@ -6,7 +6,8 @@
     <body>
         {% include body.html %}
         <header class="is-center-aligned">
-            <h1>Ben Walters</h1>
+            <h1 class="is-hidden-mobile is-hidden-tablet"><a href="/">Ben Walters</a></h1>
+            <h1 class="is-hidden-desktop"><a href="/">BW</a></h1>
         </header>
         <main>
             {{ content }}

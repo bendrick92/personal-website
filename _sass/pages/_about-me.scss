@@ -5,7 +5,7 @@
             opacity: 0;
             @include animation(fade-in-slide-up 500ms forwards);
         }
-        h3 {
+        h2 {
             opacity: 0;
             @include animation(fade-in-slide-up 500ms 400ms forwards);
         }

@@ -12,3 +12,13 @@
     color: $dark-gray;
     cursor: pointer;
 }
+
+.project-icon {
+    margin: .25em;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    line-height: .8em;
+    font-size: 5em;
+    color: $dark-gray;
+}

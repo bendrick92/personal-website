@@ -28,6 +28,11 @@ a {
     color: $dark-gray;
 }
 
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
 h1, h2, h3, h4 {
     margin: .75em 0;
     font-family: 'Scope One', sans-serif;
@@ -37,7 +42,7 @@ h1, h2, h3, h4 {
     }
 }
 h1 {
-    font-size: 50px;
+    font-size: 48px;
 }
 h2 {
     font-size: 38px;

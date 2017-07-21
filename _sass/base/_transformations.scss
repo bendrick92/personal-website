@@ -36,6 +36,14 @@
 .is-round-img {
     border-radius: 50%;
 }
+.is-inline-link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: .9em;
+    > span {
+        margin-right: .5em;
+    }
+}
 
 @include phone {
     .is-hidden-mobile {
