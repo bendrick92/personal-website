@@ -9,7 +9,7 @@ permalink: /projects/obdpi/
             <a href="/projects/" class="is-inline-link"><span class="fa fa-sm fa-chevron-left"></span> Return to Projects</a>
         </div>
         <div class="item flex-100 is-center-aligned">
-            <h2>obdPi</h2>
+            <h1>obdPi</h1>
             <div class="inline-image-wrapper">
                 <div style="background-image: url('https://assets.bpwalters.com/images/obdpi.jpg');"></div>
             </div>
