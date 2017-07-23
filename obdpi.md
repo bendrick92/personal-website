@@ -22,11 +22,11 @@ permalink: /projects/obdpi/
             <p>Overall, obdPi has easily been my most challenging project, but also the most rewarding.  Unfortunately, due to time constraints and other projects, I haven't had a chance to revisit obdPi for some time.  I hope to get back into it some day soon!</p>
             <h3>Objectives</h3>
             <ul>
-                <li>How to code in Python</li>
-                <li>How to wire a 16x2 OLED display</li>
-                <li>How to retrieve OBD-II diagnostic data from my car via Bluetooth</li>
-                <li>How to wire a ignition-dependent power supply</li>
-                <li>How to configure an extremely lightweight, headless Raspbian OS</li>
+                <li>Learn how to code in Python</li>
+                <li>Learn how to wire a 16x2 OLED display</li>
+                <li>Learn how to retrieve OBD-II diagnostic data from my car via Bluetooth</li>
+                <li>Learn how to wire a ignition-dependent power supply</li>
+                <li>Learn how to configure an extremely lightweight, headless Raspbian OS</li>
             </ul>
             <h3>Links</h3>
             <ul>
