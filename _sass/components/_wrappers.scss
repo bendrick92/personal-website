@@ -19,7 +19,9 @@
         left: 0;
         background-size: cover;
         background-position: center;
-        opacity: 0.5;
+        &.is-opaque {
+            opacity: 0.5;
+        }
     }
 }
 .inline-image-wrapper {
