@@ -1,0 +1,32 @@
+.container {
+    height: 100%;
+    max-width: $container-max-width;
+    padding: 2rem 0;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    @include flexbox;
+    @include flex-direction(row); 
+    @include flex-wrap(wrap);       
+    @include justify-content(flex-start);
+}
+.column-container {
+    @extend .container;
+    @include flex-direction(column); 
+}
+
+@include phone {   
+    .container {
+        width: 95%;
+    }
+}
+@include tablet {
+    .container {
+        width: 95%;
+    }
+}
+@include desktop {
+    .container {
+        width: 90%;
+    }
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        {% include head.html %}
+    </head>
+    <body>
+        {% include body.html %}
+        <header class="is-center-aligned">
+            <h1 class="is-hidden-mobile is-hidden-tablet"><a href="/">Ben Walters</a></h1>
+            <h1 class="is-hidden-desktop"><a href="/">BW</a></h1>
+        </header>
+        <main>
+            {{ content }}
+        </main>
+        <footer>
+            {% include footer.html %}
+        </footer>
+    </body>
+    {% include scripts.html %}
+</html>

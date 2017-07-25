@@ -1,0 +1,17 @@
+#about-me {
+    #intro {
+        img {
+            width: 20em;
+            opacity: 0;
+            @include animation(fade-in-slide-up 500ms forwards);
+        }
+        h2 {
+            opacity: 0;
+            @include animation(fade-in-slide-up 500ms 400ms forwards);
+        }
+        p {
+            opacity: 0;
+            @include animation(fade-in-slide-up 500ms 800ms forwards);
+        }
+    }
+}

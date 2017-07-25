@@ -1,0 +1,55 @@
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: $dark-gray;
+    @include flexbox;
+    @include flex-direction(column); 
+    main {
+        @include flex(1, 0, auto);
+        @include flexbox;
+        > * {
+            width: 100%;
+        }
+    }
+}
+
+p, ul, ol {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    line-height: 1.75rem;
+}
+
+a {
+    color: $dark-gray;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+h1, h2, h3, h4 {
+    margin: .75em 0;
+    font-family: 'Scope One', sans-serif;
+    letter-spacing: 1px;
+    &.section-heading {
+        text-transform: uppercase;
+    }
+}
+h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 38px;
+}
+h3 {
+    font-size: 30px;
+}
+h4 {
+    font-size: 25px;
+}
