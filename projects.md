@@ -32,9 +32,5 @@ layout: default
                 <div style="background-image: url('https://assets.bpwalters.com/images/mnstoc.png');"></div>
             </div>
         </div>
-        <div class="item flex-50 has-centered-content project-item has-gutter zoom-on-hover">
-            <a href="/projects/vbulletin-scraper/"></a>
-            <h3>vBulletin Scraper</h3>
-        </div>
     </div>
 </section>
