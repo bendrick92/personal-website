@@ -2,19 +2,22 @@
 <html>
     <head>
         {% include head.html %}
+        {% include google_tag_manager_website_head.html %}
     </head>
     <body>
-        {% include body.html %}
-        <header class="is-center-aligned">
-            <h1 class="is-hidden-mobile is-hidden-tablet"><a href="/">Ben Walters</a></h1>
-            <h1 class="is-hidden-desktop"><a href="/">BW</a></h1>
+        {% include google_tag_manager_website_body.html %}
+        <header>
+            <div class="container">
+                <div class="item flex-100 is-center-aligned">
+            <span class="site-title is-hidden-mobile is-hidden-tablet"><a href="/">Ben Walters</a></span>
+            <span class="site-title is-hidden-desktop"><a href="/">BW</a></span>
+                </div>
+            </div>
         </header>
         <main>
             {{ content }}
         </main>
-        <footer>
-            {% include footer.html %}
-        </footer>
+        {% include footer.html %}
     </body>
     {% include scripts.html %}
 </html>

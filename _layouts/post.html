@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<section id="post-content" class="is-fill">
+    <div class="container">
+        <div id="post-intro" class="item flex-100">
+            <h1 class="is-post-title">{{ page.title }}</h1>
+            <p class="is-subheading">{{ page.date | date: '%B %d, %Y' }}</p>
+            <div class="background-image-wrapper is-dark">
+                <div class="is-opaque" style="background-image: url('{{ page.image }}');"></div>
+            </div>
+        </div>
+        <div class="item flex-100">
+            <hr>
+            <article>
+                {{ page.content }}
+                {% if page.comments != false %}
+                    <p>{% include disqus.html %}</p>
+                {% endif %}
+            </article>
+        </div>
+    </div>
+</section>

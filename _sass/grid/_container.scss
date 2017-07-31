@@ -5,6 +5,7 @@
     margin: 0 auto;
     position: relative;
     box-sizing: border-box;
+    @include flex(1);
     @include flexbox;
     @include flex-direction(row); 
     @include flex-wrap(wrap);       
@@ -27,6 +28,6 @@
 }
 @include desktop {
     .container {
-        width: 90%;
+        width: 95%;
     }
 }

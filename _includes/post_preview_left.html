@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="item flex-50">
+        <a href="{{ post.url }}" class="background-link-wrapper"></a>
+        <div class="background-image-wrapper">
+            <div style="background-image: url('{{ post.image }}');"></div>
+        </div>
+    </div>
+    <div class="item flex-50">
+        <section id="{{ post.id | remove: '/' }}-preview" class="is-alternating-section">
+            <h2 class="is-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <p class="is-subheading">{{ post.date | date: '%B %d, %Y' }}</p>
+            <hr>
+            <article>
+                <p>{{ post.content | strip_html | truncatewords: 25 }}</p>
+            </article>
+        </section>
+    </div>
+</div>

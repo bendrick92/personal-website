@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: projects
 ---
 
 <section id="projects">

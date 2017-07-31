@@ -2,7 +2,7 @@
 layout: homepage
 ---
 
-<section id="homepage">
+<section id="homepage" class="is-fill">
     <div class="container">
         <div class="item flex-33 has-gutter has-centered-content zoom-on-hover">
             <a href="/about-me/"></a>
@@ -19,7 +19,7 @@ layout: homepage
             </div>
         </div>
         <div class="item flex-33 has-gutter has-centered-content zoom-on-hover">
-            <a href="https://blog.bpwalters.com"></a>
+            <a href="/blog/"></a>
             <h2>Blog</h2>
             <div class="background-image-wrapper">
                 <div class="is-opaque" style="background-image: url('https://assets.bpwalters.com/images/chromebook.jpg');"></div>

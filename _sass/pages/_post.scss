@@ -1,0 +1,29 @@
+#post-content {
+    #post-intro {
+        padding: 1.25rem 2rem;
+        margin: 0 1rem 1.25rem;
+        color: $white;
+    }
+    img {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@include phone-and-tablet {
+    #post-content {
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+@include desktop {
+    #post-content {
+        img {
+            width: 75%;
+            max-width: 75%;
+        }
+    }
+}
