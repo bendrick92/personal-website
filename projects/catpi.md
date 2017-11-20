@@ -18,6 +18,6 @@ permalink: /projects/catpi/
 </ul>
 <h3>Links</h3>
 <ul>
-    <li><a href="https://blog.bpwalters.com/raspberry-pi-powered-internet-cat-feeder/">Blog post</a></li>
+    <li><a href="/blog/raspberry-pi-powered-internet-cat-feeder/">Blog post</a></li>
     <li><a href="https://github.com/bendrick92/catPi">Github repo</a></li>
 </ul>

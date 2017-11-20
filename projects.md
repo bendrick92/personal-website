@@ -32,5 +32,12 @@ layout: projects
                 <div class="is-opaque" style="background-image: url('https://assets.bpwalters.com/images/mnstoc.png');"></div>
             </div>
         </div>
+        <div class="item flex-50 has-centered-content project-item has-gutter zoom-on-hover">
+            <a href="/projects/mako/"></a>
+            <h3>Mako (Arduino Carputer)</h3>
+            <div class="background-image-wrapper">
+                <div class="is-opaque" style="background-image: url('https://assets.bpwalters.com/images/professional_blog/mako_mounted_2.jpg');"></div>
+            </div>
+        </div>
     </div>
 </section>

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Arduino OBD-II Carputer"
-image: https://assets.bpwalters.com/images/professional_blog/arduino_oled.jpg
+image: https://assets.bpwalters.com/images/professional_blog/mako_mounted_2.jpg
 ---
 
 When I published my [Raspberry Pi OBD-II Carputer](/raspberry-pi-obd-ii-carputer) project a little over a year ago, I could never have expected the overwhelmingly positive response it received.
@@ -40,7 +40,7 @@ I was immediately impressed with how easy to use the Arduino platform is.  Comin
 
 As I started researching existing Arduino OBD-II projects, I came across [Freematics](http://freematics.com/) - a homebrew company that specializes in OBD-II Arduino hardware.  While they offer a number of wired and wireless adapters for OBD-II, I decided to order up one of their [V2 UART Adapters](https://freematics.com/store/index.php?route=product/product&product_id=83).
 
-![Freematics UART V2](...)
+![Freematics UART V2](https://assets.bpwalters.com/images/professional_blog/freematics_uart_adapter.jpg)
 
 #### Freematics Makes It Easy
 
@@ -83,9 +83,7 @@ With the easy stuff out of the way, I knew it would be necessary to implement so
 
 I pulled back up Freematics' site and noticed they offer a [3.5" Touch LCD Shield](https://freematics.com/store/index.php?route=product/product&path=59&product_id=70) for the Arduino Mega:
 
-![Freematics Touch LCD Shield](...)
-
-Built by DFRobot, this shield is designed to seamlessly integrate with the V2 UART cable; with the necessary male connectors conveniently pre-wired at the base of the display.
+Built by DFRobot, this shield is designed to seamlessly integrate with the V2 UART cable; with the necessary male connectors conveniently pre-wired at the base of the display; perfect for my project, so I ordered one up!
 
 While waiting for the LCD to ship, I headed over to my local Microcenter and picked up one of their generic brand Arduino Megas.  (Amazon also stocks [Megas](http://amzn.to/2wVNpHg))
 
@@ -108,15 +106,66 @@ With obdPi, my original intentions had been to eventually integrate the entire s
 
 For those of you who don't know, the Accessport is the go-to device for anyone looking to tune their vehicle's ECU.  Currently on it's third revision, the Accessport (or AP) is designed as an easy way for owners to upload, manage, and monitor various tunes and performance maps for their vehicle.  Much like rooting or jailbreaking an Android or iOS device, cracking a vehicle's ECU provides the opportunity to optimize various parameters for increased performance and/or efficiency.  In addition, the Accessport offers real-time performance monitoring and logging.
 
-![COBB Accessport](...)
+![COBB Accessport](https://assets.bpwalters.com/images/professional_blog/accessport_1.jpg)
 
-While I'm not brave enough to dabble in the dark art of ECU tuning myself, I do see the appeal of having access to real-time performance data, as well as the ability to log this data for later reference.  As such, I decided to take a stab at replicating this functionality using my Arduino setup.
+While I'm not brave enough to dabble in the dark art of ECU tuning myself, I do see the appeal of having access to real-time performance data, as well as the ability to log this data for later reference.  As such, I decided to take a stab at replicating Accessport-like functionality using my Arduino setup.
 
-Having already sorted the hardware side of things, I turned my attention to the software.  While Freematics' Arduino scripts already provide a variety of performance data, I wasn't happy with the basic layout and GUI.
+Having already sorted the hardware side of things, I turned my attention to the software.  While Freematics' Arduino libraries already provide a variety of performance data, I wasn't satisfied with the basic layout and GUI.
 
 #### Gettin' GUI With It
 
-I started by dissecting the example scripts from Freematics' Github repo, and quickly realized there was a significant amount of extraneous code in a number of the libraries.  In addition, while there seemed to be a solid foundation for extended functionality, the original code didn't allow for things like a rotated screen or a page-based layout.
+I started by dissecting the example scripts from Freematics' Github repo, and quickly realized there was a bunch of extraneous code in a number of the libraries (for my purposes).  In addition, while there seemed to be a solid foundation for extended functionality, the original code didn't easily allow for things like a rotated screen or a page-based layout.
 
-As a result, I spent a good amount of time refactoring and optimizing the base libraries for my specific setup.  In addition, I implemented my own gauge-based layout through a library I decided to call [Mako](https://github.com/bendrick92/Mako.
+As a result, I spent a good amount of time refactoring and optimizing the base libraries.  After successfully rendering a portrait-oriented design on-screen, I moved on to building the various gauges and menus I envisioned.
+
+Things moved pretty slow at first...
+
+![Rendering lines on-screen](https://assets.bpwalters.com/images/professional_blog/arduino_basic_layout.jpg)
+
+But I quickly built an appreciation for the programmers in the early days of GUI interfaces.  After some trial and error, I was able to generate rotating gauges.  Determining the endpoints and positioning of the various lines, labels, and other shapes had me racking my brain for middle school geometry equations (see kids - you do use that stuff eventually) and turned out to be a lot more fun than I thought it'd be!
+
+![Some geometry necessary](https://assets.bpwalters.com/images/professional_blog/arduino_gauge_labels.jpg)
+
+In the end, I had a few working gauges and had gotten the touch functionality working (a simple screen tap would cycle through the gauges).  At this point, I was ready to test everything out in the car, but still hadn't settled on a good mounting system.
+
+Taking some inspiration from the Accessport, I found a case for the Arduino Mega that would allow enough clearance for the LCD shield.  The [SunFounder Mega 2560](http://amzn.to/2B1QPqL) on Amazon looked like it'd fit the bill.
+
+![The SunFounder Mega 2560 case installed](https://assets.bpwalters.com/images/professional_blog/arduino_mega_case_1.jpg)
+
+![Test-fitting the LCD shield on the case](https://assets.bpwalters.com/images/professional_blog/arduino_mega_case_2.jpg)
+
+The case fit perfectly, and with the pin headers left exposed and flush with the outside of the case, I was able to re-install the LCD shield with no issues!
+
+With the case sorted, I decided to utilize an [Anker air vent magnetic phone mount](http://amzn.to/2hKtBRd) for mounting the Arduino in the car.  This would allow me to reposiiton the Arduino as many times as I like, and thanks to the new case, I had a surface on which I could safely mount one of the adhesive magnetic patches.
+
+#### Moar Power!
+
+Because the Freematics adapter utilizes the OBD-II 12V pin to power the Arduino (a constant 12V source), I needed to figure out how I could power the Arduino off when the car turned off.  After considering a few software options, I decided to build an inline hardware kill switch.  I ordered a few [LED inline power switches](http://amzn.to/2zRB5s0), chopped the ends off, added a pair of additional wires (to extend the Freematics data lines) and terminated both ends in matching male/female 1x4 connector housings.
+
+![Cutting the ends of the switch wiring](https://assets.bpwalters.com/images/professional_blog/arduino_killswitch_1.jpg)
+
+![Soldering and crimping the male connectors](https://assets.bpwalters.com/images/professional_blog/arduino_killswitch_2.jpg)
+
+![The finished product](https://assets.bpwalters.com/images/professional_blog/arduino_killswitch_3.jpg)
+
+Killswitch sorted, I was ready to install everything in the car.  Thanks to the single cable of the Freematics adapter, it was easy to run everything up the dash and out the side of the steering column.  I wired in the killswitch and installed the Arduino on the magnetic Anker mount, then fired everything up for a test run.
+
+![Everything mounted and wired up](https://assets.bpwalters.com/images/professional_blog/mako_mounted_1.jpg)
+
+![View from the driver's seat](https://assets.bpwalters.com/images/professional_blog/mako_mounted_2.jpg)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/K_WtCAshz9o" frameborder="0" allowfullscreen></iframe>
+
+In the video you can see the working boost and RPM gauges!  Needless to say I was amazed and excited I had gotten this far.  The only thing left to do was clean up the code and add a few more gauges!
+
+#### Work in Progress
+
+Unfortunately, life happened (we moved houses) and I was forced to sideline the project for a number of months.  By the time I got the time and inspiration to pick the project back up, I found myself in a position to sell my Fiesta ST and move up to a Subaru WRX - the car that started this whole carputer thing in the first place.  While I cover that experience in detail over on my [other blog](https://benscarblog.com/buying-a-wrx/), I realized I was moving into a car with the kind of functionality and gauges I had been [hacking together](/raspberry-pi-obd-ii-carputer/) in my free time in the months prior.  This made me a little sad, as I realized I no longer had a *need* for the Arduino carputer.
+
+![My new WRX](https://assets.bpwalters.com/images/bens_car_blog/wrx_dealership.jpg)
+
+It's been a few months since buying the WRX, and I still haven't had the opportunity to pick this project back up.  However, I did want to share my experience with you so I've published my working code on my Github [here](https://github.com/bendrick92/Mako).
+
+Maybe one day I'll find a new use for the Arduino carputer, but for now I'm enjoying the car as-is way too much.  I hope this project can inspire someone else, and hopefully this post/code helps in some way.  If you are interested in the project and have questions/want to chat, please don't hesitate to shoot me an [email](mailto:contact@bpwalters.com)!  I'd love to see what you're working on!
+
 

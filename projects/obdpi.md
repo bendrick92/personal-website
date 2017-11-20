@@ -20,7 +20,7 @@ permalink: /projects/obdpi/
 </ul>
 <h3>Links</h3>
 <ul>
-    <li><a href="https://blog.bpwalters.com/raspberry-pi-obd-ii-carputer/">Blog post</a></li>
+    <li><a href="/blog/raspberry-pi-obd-ii-carputer/">Blog post</a></li>
     <li><a href="https://bendrick92.github.io/obdPi/">Setup and documentation</a></li>
     <li><a href="https://github.com/bendrick92/obdPi">Github repo</a></li>
 </ul>
