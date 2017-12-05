@@ -31,13 +31,13 @@ With all that out of the way, let's get started!
 
 The first step in setting up any new Raspberry Pi is to format an SD card for installing the Raspbian OS on. If you purchased/your Pi came with a pre-formatted NOOBS SD card, you can skip these first few steps as your SD card already has Raspbian ready to go.
 
-For those of you with brand new, unformatted cards, you'll want to follow [raspberrypi.org](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)'s excellent guide to getting Raspbian installed on your SD card.
+For those of you with brand new, unformatted cards, you'll want to follow [raspberrypi.org](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)'s excellent guide to getting Raspbian installed on your SD card.  For those of you looking to use your Pi as a dedicated web server, you can elect to install a Raspbian Lite image from the list of [downloads](https://www.raspberrypi.org/downloads/raspbian/).  This will configure your Raspbian installation to run headless (without a GUI), which is a cut down version of the OS.
 
 Once you've completed the Raspbian installation process, you can go ahead and plug your SD card into your Pi along with your HDMI, Ethernet and USB mouse/keyboard. Fiinally, add some USB power to boot it up for the first time!
 
 Next go ahead and complete the Raspbian installation, making sure to enable SSH in the configuration process (great video tutorial available [here](https://www.raspberrypi.org/help/noobs-setup/)).
 
-NOTE: If your first Raspberry Pi boot completes without any prompts, it will eventually end you on the GUI desktop. To ensure SSH is enabled from here, click "Menu" in the top left and navigate to "Preferences > Raspberry Pi Configuration". In the window that opens, switch to the "Interfaces" tab and make sure "SSH" is set to "enabled".
+NOTE: If you chose to install the full Raspbian OS and your first Raspberry Pi boot completes without any prompts, it will eventually end you on the GUI desktop. To ensure SSH is enabled from here, click "Menu" in the top left and navigate to "Preferences > Raspberry Pi Configuration". In the window that opens, switch to the "Interfaces" tab and make sure "SSH" is set to "enabled".
 
 
 #### Step Two: Setting Up LAMP
@@ -60,7 +60,7 @@ OPTIONAL: If using the default password, you can change it by entering the follo
 
 `passwd`
 
-OPTIONAL: By default, the full Raspbian image includes a number of extra features/libraries that most users won't need. You can run a script (follow the instructions [here](https://blog.samat.org/2015/02/05/slimming-an-existing-raspbian-install/)) to optimize and remove these unecessary features and speed up the boot time of your Pi. Note, this may take a while to run, so go grab a snack!
+OPTIONAL: By default, the full Raspbian image includes a number of extra features/libraries that most users won't need. You can run a script (follow the instructions [here](https://blog.samat.org/2015/02/05/slimming-an-existing-raspbian-install/)) to optimize and remove these unecessary features and speed up the boot time of your Pi. Note, this may take a while to run, so go grab a snack!  If you chose to install Raspbian Lite, you can skip this step.
 
 Now that you're connected to the Pi, you'll want to update your Raspbian package list and install any new versions as necessary:
 
@@ -84,19 +84,17 @@ If nothing shows up, try restarting the Apache service:
 
 The next step in the LAMP setup is to install MySQL, which is a powerful open-source Database Management System used to manage/save application data:
 
-`sudo apt-get install mysql-server mysql-client php5-mysql`
-
-You will be prompted with several windows asking for a default "root" password and confirmation. Feel free to enter whatever password you like, but be sure to take note of it for future use.
+`sudo apt-get install default-mysql-server php7.0-mysql -y`
 
 Once the MySQL installation is complete, it can be activated using the following command:
 
-`sudo mysql_install_db`
+`sudo mysql_secure_installation`
 
 You'll be asked for the root password you set during the installation process (you can change it here if you'd like), followed by a number of configuration questions. In most cases, you can simply answer "y" to all of these and proceed through the rest of the process.
 
 Now that MySQL is installed and configured, we'll install PHP:
 
-`sudo apt-get install php5 libapache2-mod-php5 -y`
+`sudo apt-get install php7.0 libapache2-mod-php7.0 -y`
 
 Once the PHP installation is finished, you're ready to configure Apache to serve your pages, bypassing your ISP's restrictions on port 80.
 
@@ -190,7 +188,7 @@ mv /etc/ddclient.conf /etc/ddclient
 
 Next, we're going to update our 'ddclient.conf' to communicate with our new DNS profile on Cloudflare, but first need to get our Cloudflare API key.
 
-This can be done by logging in to your account, going to your settings (dropdown in the top right), and scrolling down to the "API Key" section:
+This can be done by logging in to your account, going to "My Profile" (dropdown in the top right), and scrolling down to the "API Key" section:
 
 ![Cloudflare API](http://i.imgur.com/yhlByXV.png)
 
@@ -218,15 +216,31 @@ To test our configuration, and set the initial values, run:
 
 You should see a list of debug commands followed by a "SUCCESS" line reporting that your server's current IP was set on your DNS record.
 
+
+#### Step 6: Port Forwarding Setup
+
+The last step is to configure your home router to forward HTTP requests to port 5050.  The steps for this will vary greatly depending on your brand and model of router, but for simplicity I'm going to run through the setup steps for my **Netgear Nighthawk R6900**.
+
+First, open the admin page for your router again.  As before, the IP address for your router can usually be found on the underside of the router itself, or a quick Google search of your router's brand/model.  In my case, its http://192.168.0.1.
+
+Within the Netgear interface, click on the "Advanced" tab, then under "Advanced Setup" on the left side menu click the heading to expand the options.  You should see "Port Forwarding/Port Triggering" - click to open your port forwarding options.
+
+![Netgear admin page](https://imgur.com/8KV3N61.png)
+
+On the left side of the screen there should be a "Service Name" dropdown with a few options - select "HTTP" here.  Next, in the "Server IP Address" box, enter the IP address of your Pi server and click "Add".  This should map the HTTP port to the internal IP address of your Pi.  Finally, we need to edit the newly created configuration to have it map external port 80 to internal port 5050 (the port we configured your Apache server to listen on).
+
+![Netgear port forwarding](https://imgur.com/OMWLHFe.png)
+
+And that's it! Congratulations - you should now have a fully functional, publicly available Raspberry Pi web server!
+
 Let's quick recap what we've accomplished.
 
 * First, we installed all of the necessary web server components on your Raspberry Pi.
 * Second we configured our Apache web server to listen for requests on port 5050 instead of the default 80.
 * Third, we set up Dynamic DNS on our newly registered domain name with Cloudflare.
-* Finally, we set up DDNS on Apache to regularly update our Cloudflare DNS record with our web server's randomly assigned public IP address.
+* Fourth, we set up DDNS on Apache to regularly update our Cloudflare DNS record with our web server's randomly assigned public IP address.
+* Finally, we set up a port forwarding rule on our router to forward external port 80 HTTP requests to port 5050 of our Pi server.
 
 NOTE: It may take a few minutes to a few hours for your DNS record to update and correctly resolve requests to your domain name to the public IP of your web server, so be patient.
-
-And that's it! Congratulations - you now have a fully functional Raspberry Pi web server!
 
 Please feel free to share any questions/comments you may have below!
