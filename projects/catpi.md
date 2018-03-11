@@ -20,4 +20,5 @@ permalink: /projects/catpi/
 <ul>
     <li><a href="/blog/raspberry-pi-powered-internet-cat-feeder/">Blog post</a></li>
     <li><a href="https://github.com/bendrick92/catPi">Github repo</a></li>
+    <li><a href="https://github.com/bendrick92/catPi#catpi">Setup/Documentation</a></li>
 </ul>
