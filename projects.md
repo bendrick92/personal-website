@@ -36,7 +36,7 @@ layout: projects
             <a href="/projects/benscarblog/"></a>
             <h3>Ben's Car Blog</h3>
             <div class="background-image-wrapper">
-                <div class="is-opaque" style="background-image: url('https://assets.bpwalters.com/images/professional_blog/benscarblog_screenshot.png');"></div>
+                <div class="is-opaque" style="background-image: url('https://assets.bpwalters.com/images/professional_blog/benscarblog_screenshot_2020.png');"></div>
             </div>
         </div>
         <div class="item flex-50 has-centered-content project-item has-gutter zoom-on-hover">
