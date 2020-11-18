@@ -16,6 +16,10 @@ layout: default
                 <p>When I'm not at work, I'm usually buried in a good book, hanging with my wonderful wife and our cat, or blogging over at <a href="https://benscarblog.com">Ben's Car Blog</a>.</p>
                 <p>If you have any questions about my projects or are interested in working together, feel free to <a href="mailto:contact@bpwalters.com">shoot me an email</a>! I'd love to connect!</p>
             </div>
+        </div>
+    </section>
+    <section id="disclosures">
+        <div class="container">
             <div class="item flex-100">
                 <h4>Amazon Affiliates Disclosure</h4>
                 <p>Some of the links within this website utilize the <a href="https://affiliate-program.amazon.com/" target="_blank">Amazon Associates Program</a>, of which I am a participant. The Associates Program is designed as a means for me to earn fees by linking to Amazon.com products. Use of these links provide me with a small kickback.</p>

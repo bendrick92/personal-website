@@ -14,4 +14,18 @@
             @include animation(fade-in-slide-up 500ms 800ms forwards);
         }
     }
+    #disclosures {
+        h4 {
+            opacity: 0;
+            @include animation(fade-in-slide-up 500ms 1200ms forwards);
+        }
+        p {
+            opacity: 0;
+            @include animation(fade-in-slide-up 500ms 1600ms forwards);
+        }
+        #amazon-disclosure {
+            opacity: 0;
+            @include animation(fade-in-slide-up 500ms 2000ms forwards);
+        }
+    }
 }
