@@ -13,6 +13,9 @@ layout: default
         </div>
         <div class="item flex-100">
             <hr>
+            {% if page.content contains "amzn" %}
+                 {% include amazon_disclosure.html %}
+             {% endif %}
             <article>
                 {{ page.content }}
                 {% if page.comments != false %}

@@ -86,6 +86,26 @@ p {
         text-transform: uppercase;
     }
 }
+.is-inline-icon {
+    margin-right: .75em;
+}
+.is-flex-button {
+    display: flex;
+    align-items: center;
+}
+.is-alert {
+    padding: 1em;
+    border-radius: .5em;
+    display: flex;
+    align-items: center;
+    &.is-primary-alert {
+        background-color: $blue;
+        color: $white;
+    }
+    > p:last-child {
+        margin-bottom: 0;
+    }
+}
 
 @include phone {
     .is-hidden-mobile {

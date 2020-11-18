@@ -17,9 +17,9 @@ In looking over his plans, I decided there were a few additional features I'd ad
 
 The list of the parts I used loosely followed David's original documentation, but for reference here's a general list of the supplies I used:
 
-* [Zevro Compact Dry Food Dispenser](https://www.amazon.com/gp/product/B009Q8PZMK/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1)
-* [Raspberry Pi V2 Camera Module](https://www.amazon.com/gp/product/B00E1GGE40/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1)
-* [Adafruit 24" Flex Cable for Raspberry Pi Camera Module](https://www.amazon.com/gp/product/B00M4DAQH8/ref=oh_aui_detailpage_o02_s01?ie=UTF8&psc=1)
+* [Zevro Compact Dry Food Dispenser](https://amzn.to/3lG8FGz)
+* [Raspberry Pi V2 Camera Module](https://amzn.to/2He8pQ8)
+* [Adafruit 24" Flex Cable for Raspberry Pi Camera Module](https://amzn.to/2Kih19z)
 * [Adafruit Breadboard Power Supply Kit](https://www.adafruit.com/products/184)
 * [Adafruit 1/4 Perma-Proto Breadboard](https://www.adafruit.com/products/1608)
 * [FeeTech Continuous Rotation Servo](https://www.adafruit.com/products/154)
